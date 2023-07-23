@@ -12,6 +12,7 @@
 
 extern char **environ;
 
+char *_strcpy(char *dest, char *src);
 int executecommand(char **cmd, char *actualcmd);
 char *check_command(char *command);
 char **splitstring(char *str, char *delim, int *numW);
@@ -28,5 +29,6 @@ void handle_separator(char *line, int count);
 void execute_handler(char *buff);
 char *_strtok(char *str, const char *delims);
 char *_strpbrk(const char *input_str, const char *charset);
+int _strlen(char *s);
 
 #endif
