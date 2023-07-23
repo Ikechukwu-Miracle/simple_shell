@@ -12,6 +12,7 @@
 
 extern char **environ;
 
+int executecommand(char **cmd, char *actualcmd);
 char *check_command(char *command);
 char **splitstring(char *str, char *delim, int *numW);
 void freeMemory(char **, char *, int);
