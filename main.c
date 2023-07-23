@@ -9,7 +9,8 @@
 int main(void)
 {
 	char *buff = NULL;
-	size_t n = 0, numChar;
+	size_t n = 0;
+	ssize_t numChar;
 	int s_rval;
 
 	if (isatty(STDIN_FILENO))
@@ -17,7 +18,7 @@ int main(void)
 		while (1)
 		{
 			write(STDOUT_FILENO, "Ahmed&Iyke_Shell $ ", 20);
-			numChar = getline(&buff, &n, stdin);
+			numChar = _getline(&buff, &n, stdin);
 			if (numChar == -1)
 			{
 				free(buff);
@@ -33,7 +34,7 @@ int main(void)
 	}
 	else
 	{
-		while (numChar = getline(&buff, &n, stdin) != -1)
+		while ((numChar = _getline(&buff, &n, stdin)) != -1)
 		{
 			if (buff != NULL && buff[numChar - 1] == '\n')
 				buff[numChar - 1] = '\0';

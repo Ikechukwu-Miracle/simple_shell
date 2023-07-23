@@ -26,5 +26,7 @@ int change_dir(char **cmd);
 int check_separator(char *line);
 void handle_separator(char *line, int count);
 void execute_handler(char *buff);
+char *_strtok(char *str, const char *delims);
+char *_strpbrk(const char *input_str, const char *charset);
 
 #endif
