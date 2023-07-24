@@ -1,4 +1,4 @@
-#include "main.h"
+#include "shell.h"
 
 /**
  * check_separator - checks the standard input for a command separator
@@ -32,7 +32,7 @@ int check_separator(char *line)
  *
  * Return: void
  */
-void handle_separator(char *line, int count)
+void handle_separator(char *line)
 {
 	char **commandlist;
 	int i, j, numcmd = 0;

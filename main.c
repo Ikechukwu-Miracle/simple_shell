@@ -29,7 +29,7 @@ int main(void)
 			if (buff != NULL && buff[numChar - 1] == '\n')
 				buff[numChar - 1] = '\0';
 			s_rval = check_separator(buff);
-			(s_rval != 0) ? handle_separator(buff, s_rval) : execute_handler(buff);
+			(s_rval != 0) ? handle_separator(buff) : execute_handler(buff);
 		}
 	}
 	else
@@ -40,7 +40,7 @@ int main(void)
 				buff[numChar - 1] = '\0';
 			s_rval = check_separator(buff);
 			if (s_rval != 0)
-				handle_separator(buff, s_rval);
+				handle_separator(buff);
 			else
 				execute_handler(buff);
 		}

@@ -24,7 +24,7 @@ char *_strcpy(char *dest, char *src)
  *
  * Return: returns the length
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int length = 0;
 
@@ -94,4 +94,6 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (s1[i] == '\0')
 		return (0);
+
+	return (0);
 }
