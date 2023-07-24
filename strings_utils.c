@@ -44,7 +44,7 @@ int _strlen(const char *s)
  * Return: returns 0 if both strings are equal
  */
 
-int _strcmp(char *s1, char *s2)
+int _strcmp(const char *s1, const char *s2)
 {
 	int i;
 

@@ -13,6 +13,13 @@
 #define B_SIZE 1024
 
 extern char **environ;
+
+char *_strcat(char *dest, char *src);
+char *_strdup(char *source);
+bool check_builtin(const char *cmd);
+void handle_builtin(char **buffer, char *line, int no_of_buffer);
+char *check_command(char *command);
+void freeMemory(char **vec, char *cmd, int no_of_vec);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
@@ -23,7 +30,7 @@ void freeMemory(char **, char *, int);
 void handle_builtin(char **buffer, char *line, int no_of_buffer);
 void check_exit(char **buf, int no_of_buf);
 bool check_builtin(const char *cmd);
-int _strcmp(char *s1, char *s2);
+int _strcmp(const char *s1, const char *s2);
 void list_env(void);
 void _setenv(const char *var_name, const char *value);
 void _unsetenv(const char *variable);

@@ -17,7 +17,7 @@ int main(void)
 	{
 		while (1)
 		{
-			write(STDOUT_FILENO, "Ahmed&Iyke_Shell $ ", 20);
+			write(STDOUT_FILENO, "Ahmed_Iyke_Shell $ ", 20);
 			numChar = _getline(&buff, &n, stdin);
 			if (numChar == -1)
 			{
