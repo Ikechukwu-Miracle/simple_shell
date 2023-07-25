@@ -11,9 +11,17 @@ void freeMemory(char **vec, char *cmd, int no_of_vec)
 {
 	int i;
 
-	free(cmd);
-
-	for (i = 0 ; i < no_of_vec ; i++)
-		free(vec[i]);
-	free(vec);
+	if (_strcmp(vec[0], cmd) == 0)
+	{
+		for (i = 0 ; i < no_of_vec ; i++)
+			free(vec[i]);
+		free(vec);
+	}
+	else
+	{
+		free(cmd);
+		for (i = 0 ; i < no_of_vec ; i++)
+			free(vec[i]);
+		free(vec);
+	}
 }
