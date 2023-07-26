@@ -31,7 +31,7 @@ char *check_command(char *command)
 			if (stat(filepath, &buff) == 0)
 			{
 				free(cmdpath_cpy);
-				return(filepath);
+				return (filepath);
 			}
 			else
 			{
@@ -50,7 +50,7 @@ char *check_command(char *command)
 /**
  * handle_builtin - handles the builtin commands passed to the shell
  * @buffer: vecter array of commands
- * @line: pointer to string 
+ * @line: pointer to string
  * @no_of_buffer: number of commands
  *
  * Return: void
@@ -81,7 +81,7 @@ void handle_builtin(char **buffer, char *line, int no_of_buffer)
 bool check_builtin(const char *cmd)
 {
 	const char *keywords[] = {"exit", "env", "cd", "setenv", "unsetenv"};
-	int i, no_of_keyword = sizeof(keywords)/sizeof(keywords[0]);
+	int i, no_of_keyword = sizeof(keywords) / sizeof(keywords[0]);
 
 	for (i = 0; i < no_of_keyword; i++)
 	{
