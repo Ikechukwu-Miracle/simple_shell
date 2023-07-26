@@ -12,20 +12,14 @@ void check_exit(char **buf, int no_of_buf)
 	int status = 0;
 	int i;
 
-	if (_strcmp(buf[0], "exit") == 0)
-	{
-		if (buf[1] != NULL)
-			status = atoi(buf[1]);
+	if (buf[1] != NULL)
+		status = atoi(buf[1]);
 
-		if (buf != NULL)
-		{
-			for (i = 0; i < no_of_buf; i++)
-				free(buf[i]);
-			free(buf);
-		}
+	for (i = 0; i < no_of_buf; i++)
+		free(buf[i]);
+	free(buf);
 
-		exit(status);
-	}
+	exit(status);
 }
 
 /**
