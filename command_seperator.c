@@ -27,8 +27,6 @@ int check_separator(char *line)
  * multiple commands separated by semicolons (';').
  * @line:  A pointer to a character array (string) that
  * contains the input line with multiple commands
- * @count: An integer representing the number
- * of commands present in the input line.
  *
  * Return: void
  */

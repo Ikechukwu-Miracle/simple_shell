@@ -10,6 +10,7 @@ char *_strdup(char *source)
 {
 	size_t len;
 	char *destination;
+
 	if (source == NULL)
 		return (NULL);
 

@@ -36,14 +36,13 @@ int _strlen(const char *s)
 	return (length);
 }
 
-/*
+/**
  * _strcmp - compares two strings
  * @s1: first string
  * @s2: second string
  *
  * Return: returns 0 if both strings are equal
  */
-
 int _strcmp(const char *s1, const char *s2)
 {
 	int i;
