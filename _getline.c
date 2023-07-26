@@ -1,7 +1,7 @@
 #include "shell.h"
 
 static ssize_t read_buffer(char *buffer, ssize_t size, FILE *stream);
-static ssize_t append_character(char **lineptr
+static ssize_t append_character(char **lineptr,
 		ssize_t *length, size_t *capacity, char character);
 /**
  * _getline - reads a line from a file stream
